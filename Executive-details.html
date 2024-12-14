@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive-details Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+</head>
+<body>
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 md:px-20 py-4">
+          <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-blue-600">CITSA</div>
+    
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+              
+              <!-- Replace the Services link with this dropdown -->
+              <div class="relative group">
+                <button class="text-gray-600 hover:text-blue-600 transition-colors flex items-center">
+                  Services
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Service 1</a>
+                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Service 2</a>
+                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Service 3</a>
+                  </div>
+                </div>
+              </div>
+    
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Portfolio</a>
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+              <button class="border-2 border-white text-white px-8 py-3 rounded-md hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Login
+              </button>
+              
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600" id="mobile-menu-button">
+              <!-- Menu Icon -->
+              <svg class="w-6 h-6 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+              <!-- Close Icon (hidden by default) -->
+              <svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+    
+          <!-- Add this overlay div right before the mobile menu -->
+          <div id="overlay" class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden"></div>
+    
+          <!-- Mobile Navigation -->
+          <div class="md:hidden fixed top-0 left-0 w-1/2 h-full bg-white transform -translate-x-full transition-transform duration-300 ease-in-out shadow-lg z-50" id="mobile-menu">
+            <div class="flex flex-col space-y-4 p-6">
+              <div class="mb-4">
+                <div class="text-2xl font-bold text-blue-600">CITSA</div>
+              </div>
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+              
+              <!-- Replace the Services link with this dropdown -->
+              <div class="relative">
+                <button class="w-full text-left text-gray-600 hover:text-blue-600 transition-colors flex items-center justify-between" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                  Services
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="hidden pl-4 mt-2 space-y-2">
+                  <a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors">Service 1</a>
+                  <a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors">Service 2</a>
+                  <a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors">Service 3</a>
+                </div>
+              </div>
+    
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Portfolio</a>
+              <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+              <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors w-full">
+                Sign in
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="event-detail max-w-7xl mx-auto px-6 md:px-20 py-10">
+        <h1 class="text-3xl font-bold text-blue-600 mb-4">Event Title</h1>
+        <p class="text-gray-600 text-lg mb-2"><strong>Date:</strong> March 25, 2023</p>
+        <p class="text-gray-600 text-lg mb-2"><strong>Location:</strong> 123 Event Venue, City, Country</p>
+        <p class="text-gray-600 mb-6">Join us for an exciting event where we will discuss the latest trends in the industry. This is a great opportunity to network with professionals and gain insights from experts.</p>
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
+            Register Now
+        </button>
+    </section>
+    
+</body>
+</html>
